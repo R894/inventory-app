@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #[em Inventory-app], a very basic website developed as part of the Odin Project.
+
+  h1 Content
+
+  p The Inventory-app has the following record counts:
+
+  ul
+    li #[strong Items:] !{item_count}
+    li #[strong Categories:] !{category_count}

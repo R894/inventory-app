@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Item: #{item.name}
+
+  p #[strong Description:] #{item.description}
+  p #[strong Price:] #{item.price}
+  p #[strong Amount in Stock:] #{item.numstock}
+  p #[strong Category: ]
+    each cat in categories
+      a(href=cat.url) #{cat.name}
+      if cat < categories.length - 1
+        |,
+    else
+      p This item has no categories
+      
